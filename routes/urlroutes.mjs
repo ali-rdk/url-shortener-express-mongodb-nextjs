@@ -8,5 +8,5 @@ import {
 export const URLRoutes = Router();
 
 URLRoutes.post("/shorten", shortenController);
-URLRoutes.get("/:shortId", redirectController);
+URLRoutes.post("/:shortId", redirectController);
 URLRoutes.get("/", getDataController);

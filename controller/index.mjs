@@ -24,7 +24,7 @@ export const redirectController = async (req, res) => {
   if (!destination)
     return res.status(404).json({ error: "there is no corresponding url" });
 
-  res.status(201).redirect(destination.originURL);
+  res.status(201).json({ destination: destination.originURL });
 };
 
 export const getDataController = async (req, res) => {
