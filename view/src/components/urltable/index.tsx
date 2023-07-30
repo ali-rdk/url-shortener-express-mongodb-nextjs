@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const UrlTable = () => {
-  // const [urls, setUrls] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     const res = getDataService();
@@ -15,8 +14,6 @@ export const UrlTable = () => {
     });
   }, []);
   const allUrls = useSelector((state: urlState) => state.urls.values);
-  console.log(allUrls);
-  console.log("ran");
 
   return (
     <div className="p-2 flex flex-col gap-2 scroll-p-8 h-60 overflow-y-scroll">
